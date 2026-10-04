@@ -1,0 +1,13 @@
+$ env HW2_ROUNDING=towardzero results/q5-darwin-20261004-143814-assistant-cR4taw/q5_portability 
+experiment=Q5 execution environment
+compiler=16.2.0
+rounding_mode=12582912
+fast_math=false
+HW2_ROUNDING=towardzero
+long_double_bytes=8,digits=53,max_exponent=1024
+double_half_ulp_at_one=1,hex=0x1p+0
+abi_case_rounding=FE_TONEAREST
+long_double_big=9007199254740992,hex=0x1p+53
+long_double_increment=0,hex=0x0p+0
+
+[exit=0]

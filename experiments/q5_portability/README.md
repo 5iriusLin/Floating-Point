@@ -1,5 +1,68 @@
 # Q5 執行環境差異的兩個候選
 
+## Q5-only Mac／WSL commands
+
+Run from the project root. GNU GCC 16.2.0 is required to match the saved WSL
+results. Apple Clang (`/usr/bin/g++`) is not a substitute. The Mac already has
+Homebrew GCC and Xcode tools; no additional dependencies were installed.
+Python 3 is needed only for the pair checker.
+
+```bash
+# Mac: compile, inspect dependencies/assembly, and check the entry point only
+CXX=/opt/homebrew/bin/g++-16 bash scripts/run_q5.sh build
+# Mac: build and run all four Q5 rounding modes
+CXX=/opt/homebrew/bin/g++-16 bash scripts/run_q5.sh run
+# WSL: use the existing compiler selection, and run only Q5
+bash scripts/run_q5.sh run
+```
+
+Each invocation creates a new `results/q5-darwin-...-student-...` (or Linux)
+directory. Assistant runs use `HW2_RUN_ROLE=assistant`. Existing results are
+never overwritten. Compile commands, flags, all Q5/common source hashes,
+compiler release/configuration/target, binary hash, linked libraries,
+assembly, output and exit codes are saved. Use the printed result directory:
+
+```bash
+python3 scripts/verify_q5_pair.py results/linux-20261004-032643-assistant results/q5-darwin-20261004-143814-assistant-cR4taw
+```
+
+## Mac verification, 2026/10/04
+
+Actual assistant execution is saved in
+`results/q5-darwin-20261004-143814-assistant-cR4taw/`. GNU GCC 16.2.0,
+target `aarch64-apple-darwin27`, macOS 27.0.1 build 26A434. Build had no
+warnings and all four experiment exits were zero. The pair checker matches
+compiler family, exact release, flags and Q5/common source hashes against
+the saved WSL assistant run. No C++ experiment source was changed.
+
+| nearest ABI case | saved WSL assistant run | actual Mac assistant run |
+|---|---:|---:|
+| long double bytes / digits | 16 / 64 | 8 / 53 |
+| `(2^53+1)-2^53` | 1 | 0 |
+
+The Mac assembly retains `fadd`, a store/load of the sum, and `fsub`.
+The double midpoint is `0x1p+0` in nearest/downward/towardzero and
+`0x1.0000000000001p+0` in upward. Compare hexadecimal values across platforms;
+decimal formatting under directed rounding can differ. Hardware `sysctl`
+queries were denied by the execution sandbox and their failure is recorded,
+so hardware details have not been inferred from those failed queries.
+
+Limitations: the teacher's original assignment text is not present in this
+checkout. The project specifies matching source, compiler version and flags;
+those necessary checks pass, but final grading eligibility is unverified.
+The WSL locally built GCC and Homebrew GCC share release 16.2.0, not identical
+compiler binaries/configurations or vendor patches. If the assignment demands
+identical compiler builds rather than the same release, this pair does not
+establish that requirement. The source uses GNU inline assembly and noinline
+extensions; it is not strictly ISO-only C++. Candidate A intentionally varies
+the rounding environment and is not a cross-hardware result. Candidate B uses
+nearest on both platforms. Neither candidate was altered to bypass a condition.
+GCC documents `-frounding-math` as experimental, so flags alone are not proof;
+the saved generated code and actual outputs support this particular case.
+See [GCC floating-point options](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html)
+and [Apple ARM64 ABI](https://developer.apple.com/documentation/xcode/writing-arm64-code-for-apple-platforms).
+Assistant execution does not replace the student's own runs or screenshots.
+
 1. **目的**：準備相同來源、同 compiler 版本、同 flags、無一般 C++ UB 的環境差異實驗。Q5 加分結論仍需本人結果與條件核對。
 2. **程式**：`main.cpp`、`operations.cpp`。候選 A：同一 binary、同數值输入，僅 HW2_ROUNDING 選擇不同浮點執行環境，計算 `1+2^-53`。候選 B：nearest 下計算 long double 的 `(2^53+1)-2^53`，比較平台 ABI／有效位數。
 3. **編譯**（兩平台必須逐字相同的 flags）：
