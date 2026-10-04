@@ -4,17 +4,19 @@
 本人 WSL 結果：`results/linux-20261004-201349/`。
 操作者標記為 student，完整批次的 failed_experiments=0。
 
-原始數據已通過 validate_run.py；18 組中位數獨立重新由 126 筆原始樣本核對，與 q1-summary.csv 一致。Word 已放入 18 張必要截圖、18 組 timing 摘要、全部 7 回合 ns/op、12 個 accuracy 案例、Q2 的 30 組合併案例（default／libm 共 60 呼叫）、Q3 對照、Q4 的 16 組 mode／case、Q5 本人 Windows 證據及 Q6 全部 9 案例。
+原始數據已通過 validate_run.py；18 組中位數由 126 筆原始樣本獨立核對，與 q1-summary.csv 一致。
 
-圖與原始檔的 SHA-256／對照索引見 `docs/student_report_evidence.json`。21 張原始 screenshot 全部保留；三張重複畫面未再貼入正文。名稱含 2025 的 precision 圖，其命令指向本次 student 結果，已與原始 log 核對，報告有說明，不以檔名推定日期。
+## 目前 Word 版本
 
-主要 Word 仍是根目錄 `Floating_Point_Report_Q0.docx`，直接修改原檔。Mac 本人正式 Q5 已完成，先前 assistant 結果未替代本人結果。原因分析由 AI 協助整理，本人仍需檢查理解。
+根目錄 `Floating_Point_Report_Q0.docx` 已精簡為 14 頁、14 張關鍵截圖。正文依 Q0～Q7 展開，著重「我的機器實際如何計算、哪些輸出與指令支持結論」。Q1 保留全部 18 組計時中位數與 12 個精度案例；Q2～Q6 保留回答題目所需的結果摘要、關鍵輸出、產生碼與原因。測試分工及 AI 揭露集中於 Q7。
 
-Word 已透過 Microsoft Word 匯出供內部檢查的 27 頁預覽，逐頁檢查表格、截圖、圖說及頁尾。DOCX 的 22 個嵌入圖片與原始截圖 SHA-256 全部一致；裁切使用 Word 的圖片裁切設定。內部預覽不作為提交 PDF，也不放入 Git。
+完整計時樣本、全部案例與原始截圖仍保留於 results、screenshot、mac截圖，並未因報告精簡而刪除。圖與原始檔的 SHA-256／對照索引見 `docs/student_report_evidence.json`；included_in_condensed_report 與 condensed_figure_label 標示目前正文使用的圖片。
+
+Word 已透過 Microsoft Word 匯出供內部檢查的 14 頁預覽，逐頁檢查表格、截圖、圖說及頁尾。14 張嵌入圖片的原始媒體雜湊均與截圖一致；裁切與縮放使用 Word 原生設定。內部預覽不作為提交 PDF，也不放入 Git。
 
 ## Mac Q5 已完成
 
-本人目錄：`results/q5-darwin-20261004-211048-student-wdBjAR/`。開始時間 21:10:48，failed_experiments=0。四項 pair checker 皆 MATCH；nearest long double 於 WSL 為 16 bytes／64 digits、增量 1，Mac 為 8 bytes／53 digits、增量 0。四张本人 Mac 截圖已嵌入 Word，Q0／Q5／Q6／Q7 已更新；全文件共 22 張嵌入圖，原始檔雜湊一致。
+結果目錄：`results/q5-darwin-20261004-211048-student-wdBjAR/`。開始時間 21:10:48，failed_experiments=0。四項 pair checker 皆 MATCH；nearest long double 於 WSL 為 16 bytes／64 digits、增量 1，Mac 為 8 bytes／53 digits、增量 0。四張 Mac 截圖已嵌入目前 Word。
 
 ## Mac Q5 重現方式
 
