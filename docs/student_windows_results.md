@@ -8,11 +8,15 @@
 
 圖與原始檔的 SHA-256／對照索引見 `docs/student_report_evidence.json`。21 張原始 screenshot 全部保留；三張重複畫面未再貼入正文。名稱含 2025 的 precision 圖，其命令指向本次 student 結果，已與原始 log 核對，報告有說明，不以檔名推定日期。
 
-主要 Word 仍是根目錄 `Floating_Point_Report_Q0.docx`，直接修改原檔。Mac 先前 assistant 結果沒有替代本人的待完成結果。原因分析由 AI 協助整理，本人仍需檢查理解。
+主要 Word 仍是根目錄 `Floating_Point_Report_Q0.docx`，直接修改原檔。Mac 本人正式 Q5 已完成，先前 assistant 結果未替代本人結果。原因分析由 AI 協助整理，本人仍需檢查理解。
 
-Word 已透過 Microsoft Word 匯出供內部檢查的 25 頁預覽，逐頁檢查表格、截圖、圖說及頁尾。DOCX 的 18 個嵌入圖片與原始截圖 SHA-256 全部一致；裁切使用 Word 的圖片裁切設定。內部預覽不作為提交 PDF，也不放入 Git。
+Word 已透過 Microsoft Word 匯出供內部檢查的 27 頁預覽，逐頁檢查表格、截圖、圖說及頁尾。DOCX 的 22 個嵌入圖片與原始截圖 SHA-256 全部一致；裁切使用 Word 的圖片裁切設定。內部預覽不作為提交 PDF，也不放入 Git。
 
-## Mac Q5 下一步
+## Mac Q5 已完成
+
+本人目錄：`results/q5-darwin-20261004-211048-student-wdBjAR/`。開始時間 21:10:48，failed_experiments=0。四項 pair checker 皆 MATCH；nearest long double 於 WSL 為 16 bytes／64 digits、增量 1，Mac 為 8 bytes／53 digits、增量 0。四张本人 Mac 截圖已嵌入 Word，Q0／Q5／Q6／Q7 已更新；全文件共 22 張嵌入圖，原始檔雜湊一致。
+
+## Mac Q5 重現方式
 
 先 pull 本次更新，再於 Mac 專案根目錄執行：
 
@@ -26,6 +30,6 @@ CXX=g++-16 bash scripts/run_q5.sh run
 python3 scripts/verify_q5_pair.py results/linux-20261004-201349 results/q5-darwin-你的實際資料夾
 ```
 
-保留 q5-nearest.txt、compiler-full-version.txt、q5-flags.txt、source-sha256.txt、pair checker 輸出及你的 Mac 截圖。四項 MATCH 只是必要條件；還需看 long double digits、實際 nearest 結果與產生碼。完成後再將本人 Mac 結果補進 Q5，更新 Q0 輔助平台與 Q7 揭露，最後輸出提交 PDF。
+保留 q5-nearest.txt、compiler-full-version.txt、q5-flags.txt、source-sha256.txt、pair checker 輸出及你的 Mac 截圖。四項 MATCH 只是必要條件；還需看 long double digits、實際 nearest 結果與產生碼。本人 Mac 結果已補入 Q5、Q0 輔助平台與 Q7 揭露；提交 PDF 尚需本人確認分析後輸出。
 
 換行修正 `.gitattributes` 已包含 Bash／C++ 來源，避免 Windows checkout 造成 WSL 腳本 CRLF 錯誤或跨平台來源雜湊不同。

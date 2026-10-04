@@ -130,5 +130,32 @@
   "accuracy_cases": 12,
   "q2_calls": 60,
   "q4_mode_cases": 16,
-  "mac_student_q5": "pending"
+  "mac_student_q5": "completed",
+  "mac_student_run": "results/q5-darwin-20261004-211048-student-wdBjAR",
+  "mac_figures": [
+    {
+      "file": "mac截圖/截圖 2026-10-04 晚上9.15.04.png",
+      "caption": "圖 0-5 Mac 本人 macOS build、M4 核心／記憶體、GCC 16.2.0 與 target。",
+      "sha256": "f873c51e1c09a6370fc03f4b3a483065651f2a19f40e877eb403992f712ae91d"
+    },
+    {
+      "file": "mac截圖/截圖 2026-10-04 晚上9.15.48.png",
+      "caption": "圖 5-3 本人兩端 GCC family／release、逐字旗標與來源的四項 MATCH。",
+      "sha256": "486690b2f0164e82c8b85271fb13c7242660cdaed05d4575d39f9df08bf7c273"
+    },
+    {
+      "file": "mac截圖/截圖 2026-10-04 晚上9.16.28.png",
+      "caption": "圖 5-4 Mac 本人四模式：double 的受控捨入差異與 nearest long double 結果 0。",
+      "sha256": "9dc88f6badc1854d6234521a9e64d49211252d5edd50ee408bd14413cc88be06"
+    },
+    {
+      "file": "mac截圖/截圖 2026-10-04 晚上9.17.09.png",
+      "caption": "圖 5-5 Mac 的 FADD D 暫存器、STR／LDR 與 FSUB；加法存回後才減回。",
+      "sha256": "d38f456bbb463cc2102ceae646ee22a352ddc01e5d7a9e452f8c12cd7b644792"
+    }
+  ],
+  "mac_q5_status": "completed_student_run_four_pair_checks_match",
+  "report_pages": 27,
+  "embedded_screenshots": 22,
+  "visual_qa": "Microsoft Word PDF export and 27 page images inspected"
 }
