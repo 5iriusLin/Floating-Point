@@ -44,7 +44,8 @@
       ],
       "sha256": "44151c3b4ef7571697dd1051c03677895e63c80c500b99ab0cf4a3dfb3c0dc0f",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 0-1"
+      "condensed_figure_label": "圖 0-1",
+      "condensed_caption": "圖 0-1 q0-types.txt 的 sizeof、digits 與執行環境。"
     },
     {
       "file": "Screenshot 2026-10-04 202051.png",
@@ -52,7 +53,8 @@
       "crop": null,
       "sha256": "a3f6872be0d3e11e5192cf95066c2822e895072acaf787fa23b4500917224dbf",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 1-1"
+      "condensed_figure_label": "圖 1-1",
+      "condensed_caption": "圖 1-1 實測中位數與迭代設定。"
     },
     {
       "file": "Screenshot 2025-07-15 221151.png",
@@ -60,7 +62,8 @@
       "crop": null,
       "sha256": "3015ee6a0c3d6541146fba5952d5d641812422c2b9fd4c807bdb66716b3aaacd",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 1-2"
+      "condensed_figure_label": "圖 1-2",
+      "condensed_caption": "圖 1-2 型態與加總順序改變實測結果。"
     },
     {
       "file": "Screenshot 2026-10-04 202216.png",
@@ -75,7 +78,8 @@
       "crop": null,
       "sha256": "71cf11a022288a9aabf60badfd958e7cc75a8a3475dd0f0bdba2fec66f5d1914",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 1-3"
+      "condensed_figure_label": "圖 1-3",
+      "condensed_caption": "圖 1-3 double kernel 的 scalar SSE 算術指令。"
     },
     {
       "file": "Screenshot 2026-10-04 202449.png",
@@ -83,7 +87,8 @@
       "crop": null,
       "sha256": "c4a8fcdb29e52683097788462f090b9dbea055dc59203bcdd052ae1cb709af09",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 2-1"
+      "condensed_figure_label": "圖 2-1",
+      "condensed_caption": "圖 2-1 default 的 sqrt 指令與負值 fallback；forced-libm 載入函式符號。"
     },
     {
       "file": "Screenshot 2026-10-04 202517.png",
@@ -105,7 +110,8 @@
       "crop": null,
       "sha256": "204a0c8c0ec05399a19a75fdeba9a2ad0dd1471dd92c6db63b7d5d867ec77e27",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 3-1"
+      "condensed_figure_label": "圖 3-1",
+      "condensed_caption": "圖 3-1 strict／fast 在相同輸入下的輸出。"
     },
     {
       "file": "Screenshot 2026-10-04 202736.png",
@@ -120,7 +126,8 @@
       "crop": null,
       "sha256": "d55239b9a318e4b8a819a5b10a0d79a92f689e14b24b9884408c071983a75035",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 3-2"
+      "condensed_figure_label": "圖 3-2",
+      "condensed_caption": "圖 3-2 fast 改變加法順序並移除 NaN 比較。"
     },
     {
       "file": "Screenshot 2026-10-04 203035.png",
@@ -128,7 +135,8 @@
       "crop": null,
       "sha256": "6c8e4d6f18dbafc2b9cbe4d34dd9c4759ac7a6a1eda74209b58fdda2266b545c",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 4-1"
+      "condensed_figure_label": "圖 4-1",
+      "condensed_caption": "圖 4-1 精確中點、鄰近值與四模式的關鍵輸出。"
     },
     {
       "file": "Screenshot 2026-10-04 203143.png",
@@ -143,7 +151,8 @@
       "crop": null,
       "sha256": "e9536b6070b22f3bb778e27958fedcc7f0c8d457387b1fea6c2db89f4cf86ebb",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 5-1"
+      "condensed_figure_label": "圖 5-1",
+      "condensed_caption": "圖 5-1 WSL 四模式輸出，ABI 案例皆先設定 nearest。"
     },
     {
       "file": "Screenshot 2026-10-04 203307.png",
@@ -151,7 +160,8 @@
       "crop": null,
       "sha256": "c97605f822435b1371639876c3a96e619317c9450424372fcf04a25f4af8d643",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 6-1"
+      "condensed_figure_label": "圖 6-1",
+      "condensed_caption": "圖 6-1 float 的三個案例；nearest、FTZ／DAZ=false，subnormal 與 exception flags 已區分。"
     }
   ],
   "raw_q1_samples": 126,
@@ -166,33 +176,38 @@
       "caption": "圖 0-5 Mac 本人 macOS build、M4 核心／記憶體、GCC 16.2.0 與 target。",
       "sha256": "f873c51e1c09a6370fc03f4b3a483065651f2a19f40e877eb403992f712ae91d",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 0-2"
+      "condensed_figure_label": "圖 0-2",
+      "condensed_caption": "圖 0-2 Mac 的 OS、M4、記憶體與 GCC target。"
     },
     {
       "file": "mac截圖/截圖 2026-10-04 晚上9.15.48.png",
       "caption": "圖 5-3 本人兩端 GCC family／release、逐字旗標與來源的四項 MATCH。",
       "sha256": "486690b2f0164e82c8b85271fb13c7242660cdaed05d4575d39f9df08bf7c273",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 5-2"
+      "condensed_figure_label": "圖 5-2",
+      "condensed_caption": "圖 5-2 來源、GCC release 與逐字旗標核對一致。"
     },
     {
       "file": "mac截圖/截圖 2026-10-04 晚上9.16.28.png",
       "caption": "圖 5-4 Mac 本人四模式：double 的受控捨入差異與 nearest long double 結果 0。",
       "sha256": "9dc88f6badc1854d6234521a9e64d49211252d5edd50ee408bd14413cc88be06",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 5-3"
+      "condensed_figure_label": "圖 5-3",
+      "condensed_caption": "圖 5-3 Mac long double 在 nearest 下得到 0。"
     },
     {
       "file": "mac截圖/截圖 2026-10-04 晚上9.17.09.png",
       "caption": "圖 5-5 Mac 的 FADD D 暫存器、STR／LDR 與 FSUB；加法存回後才減回。",
       "sha256": "d38f456bbb463cc2102ceae646ee22a352ddc01e5d7a9e452f8c12cd7b644792",
       "included_in_condensed_report": true,
-      "condensed_figure_label": "圖 5-4"
+      "condensed_figure_label": "圖 5-4",
+      "condensed_caption": "圖 5-4 Mac FADD D、STR／LDR、FSUB：存回後才相減。"
     }
   ],
   "mac_q5_status": "completed_student_run_four_pair_checks_match",
   "embedded_screenshots": 14,
-  "report_focus": "machine observations, execution evidence, explanations; AI disclosure in Q7 only",
-  "report_pages": 14,
-  "visual_qa": "Microsoft Word PDF export; all 14 pages visually checked; 14 critical screenshots; original media hashes verified"
+  "report_focus": "direct factual statements supported by machine outputs and generated instructions; first person removed outside unchanged Q6; AI disclosure in Q7 only",
+  "report_pages": 12,
+  "visual_qa": "Microsoft Word PDF export; all 12 pages visually checked; 14 screenshots with native scaling/crop; Q6 XML unchanged",
+  "q6_preserved_sha256": "b8790d8021c78a5de961ae01abdd79183d07f271f188bcfc1d20a3d605da7859"
 }
