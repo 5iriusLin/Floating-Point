@@ -14,7 +14,7 @@
 
 ［測量問題、資料產生、防止 optimize away 的證據、原始時間、統計、誤差、scalar/SIMD、硬體實作原因、限制與截圖］
 
-## Q2 Library Implementation：std::sin
+## Q2 Library Implementation：std::sqrt
 
 ［C++ 規格來源、實際 libm 版本、輸入縮減與近似演算法、特殊值處理、呼叫路徑／硬體指令證據、實驗與截圖］
 
@@ -36,7 +36,7 @@
 
 ## Q7 AI 使用自我揭露
 
-目前 AI 協助：建立專案目錄、占位 C++ 檔案、建置設定、README、實驗規範及報告架構；實作 Q0 環境採集程式與 script，並由助手在 Windows／WSL 實際執行，保存原始紀錄與摘要。尚未執行 benchmark。本人仍須親自重跑、觀察與截圖。
+目前 AI 協助：建立專案、實作 Q0～Q6 程式、建置／批次執行／摘要腳本、實驗說明、來源筆記及報告方法；由助手實際執行 Windows／WSL Q0 環境採集，並做編譯、Q1 短程 kernel smoke check、程式入口與產生碼檢查。後續經本人授權，安裝 WSL GCC 16.2.0 並執行完整 benchmark／精度與 Q2～Q6 驗證，原始紀錄明確標為 assistant。本人仍須親自執行、觀察與截圖。
 
 本人完成：［逐次填寫：編譯、執行、截圖、觀察、來源查證、解釋与結論］。
 

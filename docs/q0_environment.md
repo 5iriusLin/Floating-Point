@@ -24,7 +24,7 @@
 | Q0 編譯 | `g++ -std=c++20 -O2 -fno-fast-math -ffp-contract=off experiments/q0_environment/main.cpp -o results/q0-wsl/q0_environment` |
 | Q0 runtime | 64-bit pointer、`FLT_EVAL_METHOD=0`、`FE_TONEAREST`、fast-math 關閉 |
 
-WSL 的拓樸及 cache 資訊是虛擬環境提供的資訊，不能當成實體 P/E 核心配置。CPU 的即時頻率、溫度與 Windows 對實體核心的排程尚未採集；WSL 中 cpufreq governor／driver 介面不可用。正式 benchmark 前應重新記錄電源與背景負載。Windows 中 `g++.exe` 位於 llvm-mingw 目錄，主實驗使用 WSL `/usr/bin/g++`。
+WSL 的拓樸及 cache 資訊是虛擬環境提供的資訊，不能當成實體 P/E 核心配置。CPU 的即時頻率、溫度與 Windows 對實體核心的排程尚未採集；WSL 中 cpufreq governor／driver 介面不可用。正式 benchmark 前應重新記錄電源與背景負載。Windows 中 `g++.exe` 位於 llvm-mingw 目錄，上述歷史採集使用 WSL `/usr/bin/g++`；正式執行改用本地 GCC 16.2.0，詳見 `docs/gcc16_toolchain.md`。
 
 ## Mac 比較環境（使用者提供）
 
@@ -40,7 +40,7 @@ WSL 的拓樸及 cache 資訊是虛擬環境提供的資訊，不能當成實體
 | compiler target | arm64-apple-darwin27.0.0 |
 | thread model | posix |
 
-此環境的 `g++` 指令回報 Apple Clang，並非 GCC。它與 WSL GCC 15.2.0 可作跨平台比較，但目前不符合 Q5 的相同編譯器版本條件。compiler target 不取代 `sw_vers` 的 OS 版本紀錄，thread model 也不代表 CPU 執行緒數。
+先前 `g++` 指令回報 Apple Clang，並非 GCC。本人後續提供 Mac 已安裝 GNU GCC 16.2.0（Homebrew），正式執行選用 `g++-16`；完整版本、路徑與 target 尚待採集。WSL 同步使用本地 GCC 16.2.0，歷史 GCC 15.2.0 數據保留。compiler target 不取代 `sw_vers` 的 OS 版本紀錄，thread model 也不代表 CPU 執行緒數。
 
 待補：`sw_vers` 完整輸出、核心數、電源狀態、編譯器路徑、實際連結函式庫，以及 Q0 浮點型態輸出。尚未將 WSL 的型態結果套用到 Mac。
 
@@ -73,4 +73,4 @@ bash experiments/q0_environment/collect_linux.sh results/q0-wsl
 
 截圖建議：① Windows 硬體與 WSL 版本；② Ubuntu／kernel、GCC 與 glibc 版本；③ Q0 編譯指令及三種浮點型態輸出。助手本次只保存文字資料，尚未產生截圖。
 
-Mac 已有上述使用者提供資訊，尚未執行完整採集。在 Mac 專案根目錄執行 `bash experiments/q0_environment/collect_mac.sh`；結果存入 `results/q0-mac/`。該 script 預設 Apple Clang；若做 Q5，仍需另外滿足同 compiler 版本與旗標條件。
+Mac 已有上述使用者提供資訊，尚未執行完整採集。在 Mac 專案根目錄執行 `bash experiments/q0_environment/collect_mac.sh`；結果存入 `results/q0-mac/`。該 script 優先使用可用的 `g++-16`；可用 `CXX=g++-16` 明確指定。Q5 仍需核對確切 compiler 版本與旗標條件。

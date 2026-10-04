@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # GCC/Clang toolchain, run from the project root. Does not run benchmarks.
 set -euo pipefail
+source scripts/compiler_env.sh
 compiler=${CXX:-g++}
 out=${1:-build/q1-scalar}
 mkdir -p "$out"

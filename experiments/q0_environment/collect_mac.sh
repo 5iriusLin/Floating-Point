@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Run on the actual Mac, from the project root. No Mac results are included.
 set -u
+source scripts/compiler_env.sh
 out=${1:-results/q0-mac}
 mkdir -p "$out"
 exec > >(tee "$out/environment.txt") 2>&1
@@ -18,6 +19,8 @@ run sh -c 'command -v clang++; command -v g++; command -v cmake'
 run shasum -a 256 experiments/q0_environment/main.cpp
 # CXX can select a specific installed compiler; this does not install tools.
 compiler=${CXX:-clang++}
+run "$compiler" --version
+run "$compiler" -dumpmachine
 run "$compiler" -std=c++20 -O2 -fno-fast-math -ffp-contract=off experiments/q0_environment/main.cpp -o "$out/q0_environment"
 if test -x "$out/q0_environment"; then
     run "$out/q0_environment"

@@ -1,0 +1,13 @@
+$ build/run-linux-20261004-032643/q0_environment 
+compiler=16.2.0
+__cplusplus=202002
+pointer_bytes=8
+FLT_EVAL_METHOD=0
+rounding_mode=0 FE_TONEAREST=0
+fast_math=false
+float: bytes=4 alignment=4 radix=2 digits=24 digits10=6 max_digits10=9 min_exponent=-125 max_exponent=128 is_iec559=true has_denorm=1 epsilon=0x1p-23 min_normal=0x1p-126 denorm_min=0x1p-149 max=0x1.fffffep+127
+double: bytes=8 alignment=8 radix=2 digits=53 digits10=15 max_digits10=17 min_exponent=-1021 max_exponent=1024 is_iec559=true has_denorm=1 epsilon=0x1p-52 min_normal=0x1p-1022 denorm_min=0x0.0000000000001p-1022 max=0x1.fffffffffffffp+1023
+long double: bytes=16 alignment=16 radix=2 digits=64 digits10=18 max_digits10=21 min_exponent=-16381 max_exponent=16384 is_iec559=true has_denorm=1 epsilon=0x8p-66 min_normal=0x8p-16385 denorm_min=0x0.000000000000001p-16385 max=0xf.fffffffffffffffp+16380
+compiler_float128_bytes=16 (extension only; libquadmath not tested)
+
+[exit=0]

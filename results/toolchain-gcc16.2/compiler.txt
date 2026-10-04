@@ -1,0 +1,12 @@
+2026-10-04T03:26:43+08:00
+CXX=/home/alan/.local/toolchains/gcc-16.2.0/bin/g++
+LD_LIBRARY_PATH=/home/alan/.local/toolchains/gcc-16.2.0/lib64
+g++ (HW2 local GCC 16.2.0) 16.2.0
+Copyright (C) 2026 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+16.2.0
+x86_64-pc-linux-gnu
+/home/alan/.local/toolchains/gcc-16.2.0/lib/gcc/x86_64-pc-linux-gnu/16.2.0/../../../../lib64/libstdc++.so
+Original system GCC: 15.2.0

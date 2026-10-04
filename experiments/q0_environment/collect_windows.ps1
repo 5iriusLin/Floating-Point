@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 $taskRoot = (Resolve-Path (Join-Path $PSScriptRoot '../..')).Path
-$taskOut = Join-Path $taskRoot 'results/q0-windows'
+$taskOut = Join-Path $taskRoot ('results/q0-windows/' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
 New-Item -ItemType Directory -Force $taskOut | Out-Null
 $taskData = [ordered]@{
     CollectedAt = (Get-Date).ToString('o')
@@ -14,11 +14,19 @@ $taskData = [ordered]@{
 }
 $taskData | ConvertTo-Json -Depth 6 | Set-Content -Encoding utf8 (Join-Path $taskOut 'hardware.json')
 $taskText = @()
-$taskText += ((& wsl --version | Out-String) -replace "`0", '')
-$taskText += ((& wsl --list --verbose | Out-String) -replace "`0", '')
+$taskEncoding = [Console]::OutputEncoding
+try {
+    # wsl.exe's Windows metadata commands emit UTF-16 when redirected.
+    [Console]::OutputEncoding = [System.Text.Encoding]::Unicode
+    $taskText += (& wsl --version | Out-String)
+    $taskText += (& wsl --list --verbose | Out-String)
+} finally {
+    [Console]::OutputEncoding = $taskEncoding
+}
 $taskText += (& powercfg /getactivescheme | Out-String)
 $taskConfig = Join-Path $env:USERPROFILE '.wslconfig'
 if (Test-Path -LiteralPath $taskConfig) { $taskText += Get-Content -LiteralPath $taskConfig }
 $taskText | Set-Content -Encoding utf8 (Join-Path $taskOut 'wsl-power.txt')
 $taskData | ConvertTo-Json -Depth 6
 $taskText
+Write-Output ('Saved Windows snapshot: ' + $taskOut)
