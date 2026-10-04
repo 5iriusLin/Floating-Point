@@ -8,15 +8,15 @@
 
 ## 目前 Word 版本
 
-根目錄 `Floating_Point_Report_Q0.docx` 已精簡為 11 頁、14 張關鍵截圖。正文依 Q0～Q7 展開，著重「我的機器實際如何計算、哪些輸出與指令支持結論」。Q1 保留全部 18 組計時中位數與 12 個精度案例；Q2～Q6 保留回答題目所需的結果摘要、關鍵輸出、產生碼與原因。Q0～Q5 與 Q7 改為直述句，原因與本機數值／指令證據直接對應；標題依原題恢復；Q6 僅更改標題，正文、表格與圖片設定原樣保留。Q5 聚焦兩平台 FE_TONEAREST 下的 ABI 差異；額外四模式原始數據仍保存在 results。測試分工及 AI 揭露集中於 Q7。
+根目錄 `Floating_Point_Report_Q0.docx` 已精簡為 9 頁、7 張關鍵截圖。Q1～Q5 明列實驗方法：輸入、控制條件、編譯與執行、數值／產生碼比較。正文依 Q0～Q7 展開，著重「我的機器實際如何計算、哪些輸出與指令支持結論」。Q1 保留全部 18 組計時中位數與 12 個精度案例；Q2～Q6 保留回答題目所需的結果摘要、關鍵輸出、產生碼與原因。Q0～Q5 與 Q7 改為直述句，原因與本機數值／指令證據直接對應；標題依原題恢復；Q6 僅更改標題，正文、表格與圖片設定原樣保留。Q5 聚焦兩平台 FE_TONEAREST 下的 ABI 差異；額外四模式原始數據仍保存在 results。測試分工及 AI 揭露集中於 Q7。
 
 完整計時樣本、全部案例與原始截圖仍保留於 results、screenshot、mac截圖，並未因報告精簡而刪除。圖與原始檔的 SHA-256／對照索引見 `docs/student_report_evidence.json`；included_in_condensed_report 與 condensed_figure_label 標示目前正文使用的圖片。
 
-Word 已透過 Microsoft Word 匯出供內部檢查的 11 頁預覽，逐頁檢查表格、截圖、圖說及頁尾。14 張嵌入圖片的原始媒體雜湊均與截圖一致；裁切與縮放使用 Word 原生設定。內部預覽不作為提交 PDF，也不放入 Git。
+Word 已透過 Microsoft Word 匯出供內部檢查的 9 頁預覽，逐頁檢查表格、截圖、圖說及頁尾。7 張嵌入圖片的原始媒體雜湊均與截圖一致；裁切與縮放使用 Word 原生設定。內部預覽不作為提交 PDF，也不放入 Git。
 
 ## Mac Q5 已完成
 
-結果目錄：`results/q5-darwin-20261004-211048-student-wdBjAR/`。開始時間 21:10:48，failed_experiments=0。四項 pair checker 皆 MATCH；nearest long double 於 WSL 為 16 bytes／64 digits、增量 1，Mac 為 8 bytes／53 digits、增量 0。四張 Mac 截圖已嵌入目前 Word。
+結果目錄：`results/q5-darwin-20261004-211048-student-wdBjAR/`。開始時間 21:10:48，failed_experiments=0。四項 pair checker 皆 MATCH；nearest long double 於 WSL 為 16 bytes／64 digits、增量 1，Mac 為 8 bytes／53 digits、增量 0。兩張 Mac 結果截圖已嵌入目前 Word。
 
 ## Mac Q5 重現方式
 
