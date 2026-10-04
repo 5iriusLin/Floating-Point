@@ -1,0 +1,33 @@
+ M experiments/q5_portability/README.md
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/assembly-build.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/build.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/check.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/compiler-config.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/compiler-full-version.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/compiler-target.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/completion.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/environment.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/hardware.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/linked-libraries.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/macos.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/pair-check.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/q5-binary-sha256.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/q5-compiler-version.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/q5-downward.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/q5-flags.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/q5-nearest.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/q5-towardzero.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/q5-upward.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/q5_portability.disasm.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/q5_portability.s
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/sdk.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/source-commit.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/source-sha256.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/start.txt
+ M results/q5-darwin-20261004-143814-assistant-cR4taw/working-tree.txt
+ M results/toolchain-gcc16.2/compiler.txt
+ M scripts/run_q5.sh
+?? .gitattributes
+?? results/linux-20261004-195428-assistant/
+?? results/q0-windows/20261004-195423/
+?? results/q5-linux-20261004-195639-assistant-tEK4jC/

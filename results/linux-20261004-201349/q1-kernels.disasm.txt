@@ -1,0 +1,618 @@
+
+build/run-linux-20261004-201349/q1-scalar/kernels.o:     file format elf64-x86-64
+
+
+Disassembly of section .text._Z6kernelIfET_mS0_S0_S0_S0_9Operationb:
+
+0000000000000000 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)>:
+   0:	f3 0f 10 25 00 00 00 	movss  0x0(%rip),%xmm4        # 8 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x8>
+   7:	00 
+   8:	f3 0f 11 44 24 f0    	movss  %xmm0,-0x10(%rsp)
+   e:	f3 0f 58 e0          	addss  %xmm0,%xmm4
+  12:	f3 0f 11 64 24 f4    	movss  %xmm4,-0xc(%rsp)
+  18:	f3 0f 10 25 00 00 00 	movss  0x0(%rip),%xmm4        # 20 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x20>
+  1f:	00 
+  20:	f3 0f 58 e0          	addss  %xmm0,%xmm4
+  24:	f3 0f 58 05 00 00 00 	addss  0x0(%rip),%xmm0        # 2c <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x2c>
+  2b:	00 
+  2c:	f3 0f 11 64 24 f8    	movss  %xmm4,-0x8(%rsp)
+  32:	f3 0f 11 44 24 fc    	movss  %xmm0,-0x4(%rsp)
+  38:	84 d2                	test   %dl,%dl
+  3a:	75 44                	jne    80 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x80>
+  3c:	83 fe 01             	cmp    $0x1,%esi
+  3f:	0f 84 8b 01 00 00    	je     1d0 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x1d0>
+  45:	83 fe 02             	cmp    $0x2,%esi
+  48:	0f 84 62 02 00 00    	je     2b0 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x2b0>
+  4e:	85 f6                	test   %esi,%esi
+  50:	75 25                	jne    77 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x77>
+  52:	f3 0f 10 44 24 f0    	movss  -0x10(%rsp),%xmm0
+  58:	31 c0                	xor    %eax,%eax
+  5a:	48 85 ff             	test   %rdi,%rdi
+  5d:	74 18                	je     77 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x77>
+  5f:	90                   	nop
+  60:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  64:	48 83 c0 01          	add    $0x1,%rax
+  68:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  6c:	48 39 c7             	cmp    %rax,%rdi
+  6f:	75 ef                	jne    60 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x60>
+  71:	f3 0f 11 44 24 f0    	movss  %xmm0,-0x10(%rsp)
+  77:	f3 0f 10 44 24 f0    	movss  -0x10(%rsp),%xmm0
+  7d:	c3                   	ret
+  7e:	66 90                	xchg   %ax,%ax
+  80:	83 fe 01             	cmp    $0x1,%esi
+  83:	0f 84 9f 00 00 00    	je     128 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x128>
+  89:	83 fe 02             	cmp    $0x2,%esi
+  8c:	0f 84 8e 01 00 00    	je     220 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x220>
+  92:	85 f6                	test   %esi,%esi
+  94:	75 72                	jne    108 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x108>
+  96:	48 85 ff             	test   %rdi,%rdi
+  99:	74 6d                	je     108 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x108>
+  9b:	f3 0f 10 64 24 f0    	movss  -0x10(%rsp),%xmm4
+  a1:	f3 0f 10 5c 24 f4    	movss  -0xc(%rsp),%xmm3
+  a7:	31 c0                	xor    %eax,%eax
+  a9:	f3 0f 10 54 24 f8    	movss  -0x8(%rsp),%xmm2
+  af:	f3 0f 10 44 24 fc    	movss  -0x4(%rsp),%xmm0
+  b5:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+  bc:	00 00 00 00 
+  c0:	f3 0f 58 e1          	addss  %xmm1,%xmm4
+  c4:	f3 0f 58 d9          	addss  %xmm1,%xmm3
+  c8:	48 83 c0 01          	add    $0x1,%rax
+  cc:	f3 0f 58 d1          	addss  %xmm1,%xmm2
+  d0:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  d4:	f3 0f 5c e1          	subss  %xmm1,%xmm4
+  d8:	f3 0f 5c d9          	subss  %xmm1,%xmm3
+  dc:	f3 0f 5c d1          	subss  %xmm1,%xmm2
+  e0:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  e4:	48 39 c7             	cmp    %rax,%rdi
+  e7:	75 d7                	jne    c0 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0xc0>
+  e9:	f3 0f 11 64 24 f0    	movss  %xmm4,-0x10(%rsp)
+  ef:	f3 0f 11 5c 24 f4    	movss  %xmm3,-0xc(%rsp)
+  f5:	f3 0f 11 54 24 f8    	movss  %xmm2,-0x8(%rsp)
+  fb:	f3 0f 11 44 24 fc    	movss  %xmm0,-0x4(%rsp)
+ 101:	eb 05                	jmp    108 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x108>
+ 103:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 108:	f3 0f 10 44 24 f0    	movss  -0x10(%rsp),%xmm0
+ 10e:	f3 0f 58 44 24 f4    	addss  -0xc(%rsp),%xmm0
+ 114:	f3 0f 58 44 24 f8    	addss  -0x8(%rsp),%xmm0
+ 11a:	f3 0f 58 44 24 fc    	addss  -0x4(%rsp),%xmm0
+ 120:	c3                   	ret
+ 121:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 128:	48 85 ff             	test   %rdi,%rdi
+ 12b:	74 db                	je     108 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x108>
+ 12d:	f3 0f 10 6c 24 f0    	movss  -0x10(%rsp),%xmm5
+ 133:	f3 0f 10 64 24 f4    	movss  -0xc(%rsp),%xmm4
+ 139:	31 c0                	xor    %eax,%eax
+ 13b:	f3 0f 10 4c 24 f8    	movss  -0x8(%rsp),%xmm1
+ 141:	f3 0f 10 44 24 fc    	movss  -0x4(%rsp),%xmm0
+ 147:	66 90                	xchg   %ax,%ax
+ 149:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 150:	00 00 00 00 
+ 154:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 15b:	00 00 00 00 
+ 15f:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 166:	00 00 00 00 
+ 16a:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 171:	00 00 00 00 
+ 175:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 17c:	00 00 00 00 
+ 180:	f3 0f 59 ea          	mulss  %xmm2,%xmm5
+ 184:	48 83 c0 01          	add    $0x1,%rax
+ 188:	f3 0f 59 e2          	mulss  %xmm2,%xmm4
+ 18c:	f3 0f 59 ca          	mulss  %xmm2,%xmm1
+ 190:	f3 0f 59 c2          	mulss  %xmm2,%xmm0
+ 194:	f3 0f 59 eb          	mulss  %xmm3,%xmm5
+ 198:	f3 0f 59 e3          	mulss  %xmm3,%xmm4
+ 19c:	f3 0f 59 cb          	mulss  %xmm3,%xmm1
+ 1a0:	f3 0f 59 c3          	mulss  %xmm3,%xmm0
+ 1a4:	48 39 c7             	cmp    %rax,%rdi
+ 1a7:	75 d7                	jne    180 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x180>
+ 1a9:	f3 0f 11 6c 24 f0    	movss  %xmm5,-0x10(%rsp)
+ 1af:	f3 0f 11 64 24 f4    	movss  %xmm4,-0xc(%rsp)
+ 1b5:	f3 0f 11 4c 24 f8    	movss  %xmm1,-0x8(%rsp)
+ 1bb:	f3 0f 11 44 24 fc    	movss  %xmm0,-0x4(%rsp)
+ 1c1:	e9 42 ff ff ff       	jmp    108 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x108>
+ 1c6:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+ 1cd:	00 00 00 
+ 1d0:	f3 0f 10 44 24 f0    	movss  -0x10(%rsp),%xmm0
+ 1d6:	31 c0                	xor    %eax,%eax
+ 1d8:	48 85 ff             	test   %rdi,%rdi
+ 1db:	0f 84 96 fe ff ff    	je     77 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x77>
+ 1e1:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 1e8:	00 00 
+ 1ea:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 1f1:	00 00 00 00 
+ 1f5:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 1fc:	00 00 00 00 
+ 200:	f3 0f 59 c2          	mulss  %xmm2,%xmm0
+ 204:	48 83 c0 01          	add    $0x1,%rax
+ 208:	f3 0f 59 c3          	mulss  %xmm3,%xmm0
+ 20c:	48 39 c7             	cmp    %rax,%rdi
+ 20f:	75 ef                	jne    200 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x200>
+ 211:	f3 0f 11 44 24 f0    	movss  %xmm0,-0x10(%rsp)
+ 217:	e9 5b fe ff ff       	jmp    77 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x77>
+ 21c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 220:	48 85 ff             	test   %rdi,%rdi
+ 223:	0f 84 df fe ff ff    	je     108 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x108>
+ 229:	f3 0f 10 6c 24 f0    	movss  -0x10(%rsp),%xmm5
+ 22f:	f3 0f 10 64 24 f4    	movss  -0xc(%rsp),%xmm4
+ 235:	31 c0                	xor    %eax,%eax
+ 237:	f3 0f 10 4c 24 f8    	movss  -0x8(%rsp),%xmm1
+ 23d:	f3 0f 10 44 24 fc    	movss  -0x4(%rsp),%xmm0
+ 243:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 249:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 250:	00 00 00 00 
+ 254:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 25b:	00 00 00 00 
+ 25f:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 266:	00 00 00 00 
+ 26a:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 271:	00 00 00 00 
+ 275:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 27c:	00 00 00 00 
+ 280:	f3 0f 5e ea          	divss  %xmm2,%xmm5
+ 284:	48 83 c0 01          	add    $0x1,%rax
+ 288:	f3 0f 5e e2          	divss  %xmm2,%xmm4
+ 28c:	f3 0f 5e ca          	divss  %xmm2,%xmm1
+ 290:	f3 0f 5e c2          	divss  %xmm2,%xmm0
+ 294:	f3 0f 5e eb          	divss  %xmm3,%xmm5
+ 298:	f3 0f 5e e3          	divss  %xmm3,%xmm4
+ 29c:	f3 0f 5e cb          	divss  %xmm3,%xmm1
+ 2a0:	f3 0f 5e c3          	divss  %xmm3,%xmm0
+ 2a4:	48 39 c7             	cmp    %rax,%rdi
+ 2a7:	75 d7                	jne    280 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x280>
+ 2a9:	e9 fb fe ff ff       	jmp    1a9 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x1a9>
+ 2ae:	66 90                	xchg   %ax,%ax
+ 2b0:	f3 0f 10 44 24 f0    	movss  -0x10(%rsp),%xmm0
+ 2b6:	31 c0                	xor    %eax,%eax
+ 2b8:	48 85 ff             	test   %rdi,%rdi
+ 2bb:	0f 84 b6 fd ff ff    	je     77 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x77>
+ 2c1:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 2c8:	00 00 
+ 2ca:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 2d1:	00 00 00 00 
+ 2d5:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 2dc:	00 00 00 00 
+ 2e0:	f3 0f 5e c2          	divss  %xmm2,%xmm0
+ 2e4:	48 83 c0 01          	add    $0x1,%rax
+ 2e8:	f3 0f 5e c3          	divss  %xmm3,%xmm0
+ 2ec:	48 39 c7             	cmp    %rax,%rdi
+ 2ef:	75 ef                	jne    2e0 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x2e0>
+ 2f1:	f3 0f 11 44 24 f0    	movss  %xmm0,-0x10(%rsp)
+ 2f7:	e9 7b fd ff ff       	jmp    77 <float kernel<float>(unsigned long, float, float, float, float, Operation, bool)+0x77>
+
+Disassembly of section .text._Z6kernelIdET_mS0_S0_S0_S0_9Operationb:
+
+0000000000000000 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)>:
+   0:	f2 0f 10 25 00 00 00 	movsd  0x0(%rip),%xmm4        # 8 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x8>
+   7:	00 
+   8:	f2 0f 11 44 24 e0    	movsd  %xmm0,-0x20(%rsp)
+   e:	f2 0f 58 e0          	addsd  %xmm0,%xmm4
+  12:	f2 0f 11 64 24 e8    	movsd  %xmm4,-0x18(%rsp)
+  18:	f2 0f 10 25 00 00 00 	movsd  0x0(%rip),%xmm4        # 20 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x20>
+  1f:	00 
+  20:	f2 0f 58 e0          	addsd  %xmm0,%xmm4
+  24:	f2 0f 58 05 00 00 00 	addsd  0x0(%rip),%xmm0        # 2c <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x2c>
+  2b:	00 
+  2c:	f2 0f 11 64 24 f0    	movsd  %xmm4,-0x10(%rsp)
+  32:	f2 0f 11 44 24 f8    	movsd  %xmm0,-0x8(%rsp)
+  38:	84 d2                	test   %dl,%dl
+  3a:	75 44                	jne    80 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x80>
+  3c:	83 fe 01             	cmp    $0x1,%esi
+  3f:	0f 84 8b 01 00 00    	je     1d0 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x1d0>
+  45:	83 fe 02             	cmp    $0x2,%esi
+  48:	0f 84 62 02 00 00    	je     2b0 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x2b0>
+  4e:	85 f6                	test   %esi,%esi
+  50:	75 25                	jne    77 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x77>
+  52:	f2 0f 10 44 24 e0    	movsd  -0x20(%rsp),%xmm0
+  58:	31 c0                	xor    %eax,%eax
+  5a:	48 85 ff             	test   %rdi,%rdi
+  5d:	74 18                	je     77 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x77>
+  5f:	90                   	nop
+  60:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
+  64:	48 83 c0 01          	add    $0x1,%rax
+  68:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
+  6c:	48 39 c7             	cmp    %rax,%rdi
+  6f:	75 ef                	jne    60 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x60>
+  71:	f2 0f 11 44 24 e0    	movsd  %xmm0,-0x20(%rsp)
+  77:	f2 0f 10 44 24 e0    	movsd  -0x20(%rsp),%xmm0
+  7d:	c3                   	ret
+  7e:	66 90                	xchg   %ax,%ax
+  80:	83 fe 01             	cmp    $0x1,%esi
+  83:	0f 84 9f 00 00 00    	je     128 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x128>
+  89:	83 fe 02             	cmp    $0x2,%esi
+  8c:	0f 84 8e 01 00 00    	je     220 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x220>
+  92:	85 f6                	test   %esi,%esi
+  94:	75 72                	jne    108 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x108>
+  96:	48 85 ff             	test   %rdi,%rdi
+  99:	74 6d                	je     108 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x108>
+  9b:	f2 0f 10 64 24 e0    	movsd  -0x20(%rsp),%xmm4
+  a1:	f2 0f 10 5c 24 e8    	movsd  -0x18(%rsp),%xmm3
+  a7:	31 c0                	xor    %eax,%eax
+  a9:	f2 0f 10 54 24 f0    	movsd  -0x10(%rsp),%xmm2
+  af:	f2 0f 10 44 24 f8    	movsd  -0x8(%rsp),%xmm0
+  b5:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+  bc:	00 00 00 00 
+  c0:	f2 0f 58 e1          	addsd  %xmm1,%xmm4
+  c4:	f2 0f 58 d9          	addsd  %xmm1,%xmm3
+  c8:	48 83 c0 01          	add    $0x1,%rax
+  cc:	f2 0f 58 d1          	addsd  %xmm1,%xmm2
+  d0:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
+  d4:	f2 0f 5c e1          	subsd  %xmm1,%xmm4
+  d8:	f2 0f 5c d9          	subsd  %xmm1,%xmm3
+  dc:	f2 0f 5c d1          	subsd  %xmm1,%xmm2
+  e0:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
+  e4:	48 39 c7             	cmp    %rax,%rdi
+  e7:	75 d7                	jne    c0 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0xc0>
+  e9:	f2 0f 11 64 24 e0    	movsd  %xmm4,-0x20(%rsp)
+  ef:	f2 0f 11 5c 24 e8    	movsd  %xmm3,-0x18(%rsp)
+  f5:	f2 0f 11 54 24 f0    	movsd  %xmm2,-0x10(%rsp)
+  fb:	f2 0f 11 44 24 f8    	movsd  %xmm0,-0x8(%rsp)
+ 101:	eb 05                	jmp    108 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x108>
+ 103:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 108:	f2 0f 10 44 24 e0    	movsd  -0x20(%rsp),%xmm0
+ 10e:	f2 0f 58 44 24 e8    	addsd  -0x18(%rsp),%xmm0
+ 114:	f2 0f 58 44 24 f0    	addsd  -0x10(%rsp),%xmm0
+ 11a:	f2 0f 58 44 24 f8    	addsd  -0x8(%rsp),%xmm0
+ 120:	c3                   	ret
+ 121:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 128:	48 85 ff             	test   %rdi,%rdi
+ 12b:	74 db                	je     108 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x108>
+ 12d:	f2 0f 10 6c 24 e0    	movsd  -0x20(%rsp),%xmm5
+ 133:	f2 0f 10 64 24 e8    	movsd  -0x18(%rsp),%xmm4
+ 139:	31 c0                	xor    %eax,%eax
+ 13b:	f2 0f 10 4c 24 f0    	movsd  -0x10(%rsp),%xmm1
+ 141:	f2 0f 10 44 24 f8    	movsd  -0x8(%rsp),%xmm0
+ 147:	66 90                	xchg   %ax,%ax
+ 149:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 150:	00 00 00 00 
+ 154:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 15b:	00 00 00 00 
+ 15f:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 166:	00 00 00 00 
+ 16a:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 171:	00 00 00 00 
+ 175:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 17c:	00 00 00 00 
+ 180:	f2 0f 59 ea          	mulsd  %xmm2,%xmm5
+ 184:	48 83 c0 01          	add    $0x1,%rax
+ 188:	f2 0f 59 e2          	mulsd  %xmm2,%xmm4
+ 18c:	f2 0f 59 ca          	mulsd  %xmm2,%xmm1
+ 190:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+ 194:	f2 0f 59 eb          	mulsd  %xmm3,%xmm5
+ 198:	f2 0f 59 e3          	mulsd  %xmm3,%xmm4
+ 19c:	f2 0f 59 cb          	mulsd  %xmm3,%xmm1
+ 1a0:	f2 0f 59 c3          	mulsd  %xmm3,%xmm0
+ 1a4:	48 39 c7             	cmp    %rax,%rdi
+ 1a7:	75 d7                	jne    180 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x180>
+ 1a9:	f2 0f 11 6c 24 e0    	movsd  %xmm5,-0x20(%rsp)
+ 1af:	f2 0f 11 64 24 e8    	movsd  %xmm4,-0x18(%rsp)
+ 1b5:	f2 0f 11 4c 24 f0    	movsd  %xmm1,-0x10(%rsp)
+ 1bb:	f2 0f 11 44 24 f8    	movsd  %xmm0,-0x8(%rsp)
+ 1c1:	e9 42 ff ff ff       	jmp    108 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x108>
+ 1c6:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+ 1cd:	00 00 00 
+ 1d0:	f2 0f 10 44 24 e0    	movsd  -0x20(%rsp),%xmm0
+ 1d6:	31 c0                	xor    %eax,%eax
+ 1d8:	48 85 ff             	test   %rdi,%rdi
+ 1db:	0f 84 96 fe ff ff    	je     77 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x77>
+ 1e1:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 1e8:	00 00 
+ 1ea:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 1f1:	00 00 00 00 
+ 1f5:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 1fc:	00 00 00 00 
+ 200:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+ 204:	48 83 c0 01          	add    $0x1,%rax
+ 208:	f2 0f 59 c3          	mulsd  %xmm3,%xmm0
+ 20c:	48 39 c7             	cmp    %rax,%rdi
+ 20f:	75 ef                	jne    200 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x200>
+ 211:	f2 0f 11 44 24 e0    	movsd  %xmm0,-0x20(%rsp)
+ 217:	e9 5b fe ff ff       	jmp    77 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x77>
+ 21c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 220:	48 85 ff             	test   %rdi,%rdi
+ 223:	0f 84 df fe ff ff    	je     108 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x108>
+ 229:	f2 0f 10 6c 24 e0    	movsd  -0x20(%rsp),%xmm5
+ 22f:	f2 0f 10 64 24 e8    	movsd  -0x18(%rsp),%xmm4
+ 235:	31 c0                	xor    %eax,%eax
+ 237:	f2 0f 10 4c 24 f0    	movsd  -0x10(%rsp),%xmm1
+ 23d:	f2 0f 10 44 24 f8    	movsd  -0x8(%rsp),%xmm0
+ 243:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 249:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 250:	00 00 00 00 
+ 254:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 25b:	00 00 00 00 
+ 25f:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 266:	00 00 00 00 
+ 26a:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 271:	00 00 00 00 
+ 275:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 27c:	00 00 00 00 
+ 280:	f2 0f 5e ea          	divsd  %xmm2,%xmm5
+ 284:	48 83 c0 01          	add    $0x1,%rax
+ 288:	f2 0f 5e e2          	divsd  %xmm2,%xmm4
+ 28c:	f2 0f 5e ca          	divsd  %xmm2,%xmm1
+ 290:	f2 0f 5e c2          	divsd  %xmm2,%xmm0
+ 294:	f2 0f 5e eb          	divsd  %xmm3,%xmm5
+ 298:	f2 0f 5e e3          	divsd  %xmm3,%xmm4
+ 29c:	f2 0f 5e cb          	divsd  %xmm3,%xmm1
+ 2a0:	f2 0f 5e c3          	divsd  %xmm3,%xmm0
+ 2a4:	48 39 c7             	cmp    %rax,%rdi
+ 2a7:	75 d7                	jne    280 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x280>
+ 2a9:	e9 fb fe ff ff       	jmp    1a9 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x1a9>
+ 2ae:	66 90                	xchg   %ax,%ax
+ 2b0:	f2 0f 10 44 24 e0    	movsd  -0x20(%rsp),%xmm0
+ 2b6:	31 c0                	xor    %eax,%eax
+ 2b8:	48 85 ff             	test   %rdi,%rdi
+ 2bb:	0f 84 b6 fd ff ff    	je     77 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x77>
+ 2c1:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 2c8:	00 00 
+ 2ca:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 2d1:	00 00 00 00 
+ 2d5:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 2dc:	00 00 00 00 
+ 2e0:	f2 0f 5e c2          	divsd  %xmm2,%xmm0
+ 2e4:	48 83 c0 01          	add    $0x1,%rax
+ 2e8:	f2 0f 5e c3          	divsd  %xmm3,%xmm0
+ 2ec:	48 39 c7             	cmp    %rax,%rdi
+ 2ef:	75 ef                	jne    2e0 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x2e0>
+ 2f1:	f2 0f 11 44 24 e0    	movsd  %xmm0,-0x20(%rsp)
+ 2f7:	e9 7b fd ff ff       	jmp    77 <double kernel<double>(unsigned long, double, double, double, double, Operation, bool)+0x77>
+
+Disassembly of section .text._Z6kernelIeET_mS0_S0_S0_S0_9Operationb:
+
+0000000000000000 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)>:
+   0:	db 6c 24 08          	fldt   0x8(%rsp)
+   4:	db 6c 24 18          	fldt   0x18(%rsp)
+   8:	db 6c 24 28          	fldt   0x28(%rsp)
+   c:	db 6c 24 38          	fldt   0x38(%rsp)
+  10:	d9 cb                	fxch   %st(3)
+  12:	d9 c0                	fld    %st(0)
+  14:	db 7c 24 b8          	fstpt  -0x48(%rsp)
+  18:	d9 c0                	fld    %st(0)
+  1a:	d8 05 00 00 00 00    	fadds  0x0(%rip)        # 20 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x20>
+  20:	db 7c 24 c8          	fstpt  -0x38(%rsp)
+  24:	d9 c0                	fld    %st(0)
+  26:	d8 05 00 00 00 00    	fadds  0x0(%rip)        # 2c <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x2c>
+  2c:	db 7c 24 d8          	fstpt  -0x28(%rsp)
+  30:	d8 05 00 00 00 00    	fadds  0x0(%rip)        # 36 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x36>
+  36:	db 7c 24 e8          	fstpt  -0x18(%rsp)
+  3a:	84 d2                	test   %dl,%dl
+  3c:	75 72                	jne    b0 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0xb0>
+  3e:	83 fe 01             	cmp    $0x1,%esi
+  41:	0f 84 c9 01 00 00    	je     210 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x210>
+  47:	83 fe 02             	cmp    $0x2,%esi
+  4a:	0f 84 80 02 00 00    	je     2d0 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x2d0>
+  50:	dd d8                	fstp   %st(0)
+  52:	dd d9                	fstp   %st(1)
+  54:	85 f6                	test   %esi,%esi
+  56:	75 30                	jne    88 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x88>
+  58:	48 85 ff             	test   %rdi,%rdi
+  5b:	74 33                	je     90 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x90>
+  5d:	db 6c 24 b8          	fldt   -0x48(%rsp)
+  61:	31 c0                	xor    %eax,%eax
+  63:	66 90                	xchg   %ax,%ax
+  65:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+  6c:	00 00 00 00 
+  70:	d8 c1                	fadd   %st(1),%st
+  72:	48 83 c0 01          	add    $0x1,%rax
+  76:	d8 e1                	fsub   %st(1),%st
+  78:	48 39 c7             	cmp    %rax,%rdi
+  7b:	75 f3                	jne    70 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x70>
+  7d:	dd d9                	fstp   %st(1)
+  7f:	db 7c 24 b8          	fstpt  -0x48(%rsp)
+  83:	eb 1f                	jmp    a4 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0xa4>
+  85:	0f 1f 00             	nopl   (%rax)
+  88:	dd d8                	fstp   %st(0)
+  8a:	eb 18                	jmp    a4 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0xa4>
+  8c:	0f 1f 40 00          	nopl   0x0(%rax)
+  90:	dd d8                	fstp   %st(0)
+  92:	eb 10                	jmp    a4 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0xa4>
+  94:	0f 1f 40 00          	nopl   0x0(%rax)
+  98:	dd d8                	fstp   %st(0)
+  9a:	dd d8                	fstp   %st(0)
+  9c:	eb 06                	jmp    a4 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0xa4>
+  9e:	66 90                	xchg   %ax,%ax
+  a0:	dd d8                	fstp   %st(0)
+  a2:	dd d8                	fstp   %st(0)
+  a4:	db 6c 24 b8          	fldt   -0x48(%rsp)
+  a8:	c3                   	ret
+  a9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+  b0:	83 fe 01             	cmp    $0x1,%esi
+  b3:	0f 84 d7 00 00 00    	je     190 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x190>
+  b9:	83 fe 02             	cmp    $0x2,%esi
+  bc:	0f 84 8e 01 00 00    	je     250 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x250>
+  c2:	dd d8                	fstp   %st(0)
+  c4:	dd d9                	fstp   %st(1)
+  c6:	85 f6                	test   %esi,%esi
+  c8:	75 7e                	jne    148 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x148>
+  ca:	48 85 ff             	test   %rdi,%rdi
+  cd:	0f 84 7d 00 00 00    	je     150 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x150>
+  d3:	db 6c 24 b8          	fldt   -0x48(%rsp)
+  d7:	31 c0                	xor    %eax,%eax
+  d9:	db 6c 24 c8          	fldt   -0x38(%rsp)
+  dd:	db 6c 24 d8          	fldt   -0x28(%rsp)
+  e1:	db 6c 24 e8          	fldt   -0x18(%rsp)
+  e5:	d9 cb                	fxch   %st(3)
+  e7:	eb 1d                	jmp    106 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x106>
+  e9:	90                   	nop
+  ea:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+  f1:	00 00 00 00 
+  f5:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+  fc:	00 00 00 00 
+ 100:	d9 cb                	fxch   %st(3)
+ 102:	d9 c9                	fxch   %st(1)
+ 104:	d9 ca                	fxch   %st(2)
+ 106:	d8 c4                	fadd   %st(4),%st
+ 108:	48 83 c0 01          	add    $0x1,%rax
+ 10c:	d8 e4                	fsub   %st(4),%st
+ 10e:	d9 ca                	fxch   %st(2)
+ 110:	d8 c4                	fadd   %st(4),%st
+ 112:	d8 e4                	fsub   %st(4),%st
+ 114:	d9 c9                	fxch   %st(1)
+ 116:	d8 c4                	fadd   %st(4),%st
+ 118:	d8 e4                	fsub   %st(4),%st
+ 11a:	d9 cb                	fxch   %st(3)
+ 11c:	d8 c4                	fadd   %st(4),%st
+ 11e:	d8 e4                	fsub   %st(4),%st
+ 120:	48 39 c7             	cmp    %rax,%rdi
+ 123:	75 db                	jne    100 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x100>
+ 125:	dd dc                	fstp   %st(4)
+ 127:	d9 c9                	fxch   %st(1)
+ 129:	d9 ca                	fxch   %st(2)
+ 12b:	d9 cb                	fxch   %st(3)
+ 12d:	d9 ca                	fxch   %st(2)
+ 12f:	db 7c 24 b8          	fstpt  -0x48(%rsp)
+ 133:	db 7c 24 c8          	fstpt  -0x38(%rsp)
+ 137:	d9 c9                	fxch   %st(1)
+ 139:	db 7c 24 d8          	fstpt  -0x28(%rsp)
+ 13d:	db 7c 24 e8          	fstpt  -0x18(%rsp)
+ 141:	eb 2d                	jmp    170 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x170>
+ 143:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 148:	dd d8                	fstp   %st(0)
+ 14a:	eb 24                	jmp    170 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x170>
+ 14c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 150:	dd d8                	fstp   %st(0)
+ 152:	eb 1c                	jmp    170 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x170>
+ 154:	0f 1f 40 00          	nopl   0x0(%rax)
+ 158:	dd d8                	fstp   %st(0)
+ 15a:	dd d8                	fstp   %st(0)
+ 15c:	eb 12                	jmp    170 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x170>
+ 15e:	66 90                	xchg   %ax,%ax
+ 160:	dd d8                	fstp   %st(0)
+ 162:	dd d8                	fstp   %st(0)
+ 164:	90                   	nop
+ 165:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 16c:	00 00 00 00 
+ 170:	db 6c 24 b8          	fldt   -0x48(%rsp)
+ 174:	db 6c 24 c8          	fldt   -0x38(%rsp)
+ 178:	de c1                	faddp  %st,%st(1)
+ 17a:	db 6c 24 d8          	fldt   -0x28(%rsp)
+ 17e:	de c1                	faddp  %st,%st(1)
+ 180:	db 6c 24 e8          	fldt   -0x18(%rsp)
+ 184:	de c1                	faddp  %st,%st(1)
+ 186:	c3                   	ret
+ 187:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 18e:	00 00 
+ 190:	dd d9                	fstp   %st(1)
+ 192:	48 85 ff             	test   %rdi,%rdi
+ 195:	74 c1                	je     158 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x158>
+ 197:	db 6c 24 b8          	fldt   -0x48(%rsp)
+ 19b:	31 c0                	xor    %eax,%eax
+ 19d:	db 6c 24 c8          	fldt   -0x38(%rsp)
+ 1a1:	db 6c 24 d8          	fldt   -0x28(%rsp)
+ 1a5:	db 6c 24 e8          	fldt   -0x18(%rsp)
+ 1a9:	d9 cb                	fxch   %st(3)
+ 1ab:	eb 19                	jmp    1c6 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x1c6>
+ 1ad:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 1b4:	00 
+ 1b5:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 1bc:	00 00 00 00 
+ 1c0:	d9 cb                	fxch   %st(3)
+ 1c2:	d9 c9                	fxch   %st(1)
+ 1c4:	d9 ca                	fxch   %st(2)
+ 1c6:	d8 cc                	fmul   %st(4),%st
+ 1c8:	48 83 c0 01          	add    $0x1,%rax
+ 1cc:	d8 cd                	fmul   %st(5),%st
+ 1ce:	d9 ca                	fxch   %st(2)
+ 1d0:	d8 cc                	fmul   %st(4),%st
+ 1d2:	d8 cd                	fmul   %st(5),%st
+ 1d4:	d9 c9                	fxch   %st(1)
+ 1d6:	d8 cc                	fmul   %st(4),%st
+ 1d8:	d8 cd                	fmul   %st(5),%st
+ 1da:	d9 cb                	fxch   %st(3)
+ 1dc:	d8 cc                	fmul   %st(4),%st
+ 1de:	d8 cd                	fmul   %st(5),%st
+ 1e0:	48 39 c7             	cmp    %rax,%rdi
+ 1e3:	75 db                	jne    1c0 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x1c0>
+ 1e5:	dd dc                	fstp   %st(4)
+ 1e7:	dd dc                	fstp   %st(4)
+ 1e9:	d9 c9                	fxch   %st(1)
+ 1eb:	d9 cb                	fxch   %st(3)
+ 1ed:	d9 c9                	fxch   %st(1)
+ 1ef:	db 7c 24 b8          	fstpt  -0x48(%rsp)
+ 1f3:	db 7c 24 c8          	fstpt  -0x38(%rsp)
+ 1f7:	d9 c9                	fxch   %st(1)
+ 1f9:	db 7c 24 d8          	fstpt  -0x28(%rsp)
+ 1fd:	db 7c 24 e8          	fstpt  -0x18(%rsp)
+ 201:	e9 6a ff ff ff       	jmp    170 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x170>
+ 206:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+ 20d:	00 00 00 
+ 210:	dd d9                	fstp   %st(1)
+ 212:	48 85 ff             	test   %rdi,%rdi
+ 215:	0f 84 7d fe ff ff    	je     98 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x98>
+ 21b:	db 6c 24 b8          	fldt   -0x48(%rsp)
+ 21f:	31 c0                	xor    %eax,%eax
+ 221:	0f 1f 40 00          	nopl   0x0(%rax)
+ 225:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 22c:	00 00 00 00 
+ 230:	d8 c9                	fmul   %st(1),%st
+ 232:	48 83 c0 01          	add    $0x1,%rax
+ 236:	d8 ca                	fmul   %st(2),%st
+ 238:	48 39 c7             	cmp    %rax,%rdi
+ 23b:	75 f3                	jne    230 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x230>
+ 23d:	dd d9                	fstp   %st(1)
+ 23f:	dd d9                	fstp   %st(1)
+ 241:	db 7c 24 b8          	fstpt  -0x48(%rsp)
+ 245:	db 6c 24 b8          	fldt   -0x48(%rsp)
+ 249:	c3                   	ret
+ 24a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 250:	dd d9                	fstp   %st(1)
+ 252:	48 85 ff             	test   %rdi,%rdi
+ 255:	0f 84 05 ff ff ff    	je     160 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x160>
+ 25b:	db 6c 24 b8          	fldt   -0x48(%rsp)
+ 25f:	31 c0                	xor    %eax,%eax
+ 261:	db 6c 24 c8          	fldt   -0x38(%rsp)
+ 265:	db 6c 24 d8          	fldt   -0x28(%rsp)
+ 269:	db 6c 24 e8          	fldt   -0x18(%rsp)
+ 26d:	d9 cb                	fxch   %st(3)
+ 26f:	eb 15                	jmp    286 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x286>
+ 271:	0f 1f 40 00          	nopl   0x0(%rax)
+ 275:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 27c:	00 00 00 00 
+ 280:	d9 cb                	fxch   %st(3)
+ 282:	d9 c9                	fxch   %st(1)
+ 284:	d9 ca                	fxch   %st(2)
+ 286:	48 83 c0 01          	add    $0x1,%rax
+ 28a:	d8 f4                	fdiv   %st(4),%st
+ 28c:	d8 f5                	fdiv   %st(5),%st
+ 28e:	d9 ca                	fxch   %st(2)
+ 290:	d8 f4                	fdiv   %st(4),%st
+ 292:	d8 f5                	fdiv   %st(5),%st
+ 294:	d9 c9                	fxch   %st(1)
+ 296:	d8 f4                	fdiv   %st(4),%st
+ 298:	d8 f5                	fdiv   %st(5),%st
+ 29a:	d9 cb                	fxch   %st(3)
+ 29c:	d8 f4                	fdiv   %st(4),%st
+ 29e:	d8 f5                	fdiv   %st(5),%st
+ 2a0:	48 39 c7             	cmp    %rax,%rdi
+ 2a3:	75 db                	jne    280 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x280>
+ 2a5:	dd dc                	fstp   %st(4)
+ 2a7:	dd dc                	fstp   %st(4)
+ 2a9:	d9 c9                	fxch   %st(1)
+ 2ab:	d9 cb                	fxch   %st(3)
+ 2ad:	d9 c9                	fxch   %st(1)
+ 2af:	db 7c 24 b8          	fstpt  -0x48(%rsp)
+ 2b3:	db 7c 24 c8          	fstpt  -0x38(%rsp)
+ 2b7:	d9 c9                	fxch   %st(1)
+ 2b9:	db 7c 24 d8          	fstpt  -0x28(%rsp)
+ 2bd:	db 7c 24 e8          	fstpt  -0x18(%rsp)
+ 2c1:	e9 aa fe ff ff       	jmp    170 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x170>
+ 2c6:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+ 2cd:	00 00 00 
+ 2d0:	dd d9                	fstp   %st(1)
+ 2d2:	48 85 ff             	test   %rdi,%rdi
+ 2d5:	0f 84 c5 fd ff ff    	je     a0 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0xa0>
+ 2db:	db 6c 24 b8          	fldt   -0x48(%rsp)
+ 2df:	31 c0                	xor    %eax,%eax
+ 2e1:	0f 1f 40 00          	nopl   0x0(%rax)
+ 2e5:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+ 2ec:	00 00 00 00 
+ 2f0:	48 83 c0 01          	add    $0x1,%rax
+ 2f4:	d8 f1                	fdiv   %st(1),%st
+ 2f6:	d8 f2                	fdiv   %st(2),%st
+ 2f8:	48 39 c7             	cmp    %rax,%rdi
+ 2fb:	75 f3                	jne    2f0 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x2f0>
+ 2fd:	dd d9                	fstp   %st(1)
+ 2ff:	dd d9                	fstp   %st(1)
+ 301:	db 7c 24 b8          	fstpt  -0x48(%rsp)
+ 305:	e9 3b ff ff ff       	jmp    245 <long double kernel<long double>(unsigned long, long double, long double, long double, long double, Operation, bool)+0x245>

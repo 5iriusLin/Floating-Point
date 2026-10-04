@@ -1,0 +1,4 @@
+$ results/q5-linux-20261004-195639-assistant-tEK4jC/q5_portability --check 
+CHECK PASSED: binary floating-point support; experiment not run.
+
+[exit=0]

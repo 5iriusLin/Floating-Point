@@ -1,0 +1,4 @@
+2026-10-04T20:13:49+0800
+CXX=/home/alan/.local/toolchains/gcc-16.2.0/bin/g++
+executed_by=student
+LD_LIBRARY_PATH=/home/alan/.local/toolchains/gcc-16.2.0/lib64

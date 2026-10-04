@@ -1,0 +1,15 @@
+$ build/run-linux-20261004-195428/q3_strict 1e16 -1e16 1 
+experiment=Q3 fast math
+compiler=16.2.0
+rounding_mode=0
+fast_math=false
+a=10000000000000000,hex=0x1.1c37937e08p+53
+b=-10000000000000000,hex=-0x1.1c37937e08p+53
+c=1,hex=0x1p+0
+left_grouped=1,hex=0x1p+0
+right_grouped=0,hex=0x0p+0
+nan_input_bits=0x7ff8000000000001
+nan_self_inequality=true
+finite_control=6,hex=0x1.8p+2
+
+[exit=0]

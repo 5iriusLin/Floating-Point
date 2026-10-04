@@ -4,6 +4,8 @@ Advanced C++ Homework 2。截止：2026/10/07 23:59（Asia/Taipei），於 eecla
 
 ## 目前狀態
 
+**本人 Windows／WSL 正式執行與截圖已於 2026/10/04 完成並整理入原 Word。** 使用 student 結果 `results/linux-20261004-201349/`，18 張必要截圖已插入；Mac 本人 Q5 尚待補。[本人結果與 Mac 下一步](docs/student_windows_results.md)。下列助手準備紀錄保留作歷史分工，不取代本人數據。
+
 Q0 的 Windows／WSL 環境已由助手採集；Mac 的基本資訊由本人提供。Q1～Q6 程式、建置、批次執行、各題方法與 Word 報告預備已完成。**助手已用 GCC 16.2.0 執行一輪實際 benchmark、精度與 Q2～Q6 案例，全部成功；本人明天的執行與截圖仍待完成。** 助手紀錄獨立保存在 `results/linux-20261004-032643-assistant/`，不填作本人結果。見 [檢查紀錄](docs/assistant_validation.md)。
 
 主要平台：Windows 11 + WSL2 Ubuntu、Intel Core i7-14650HX；比較平台：MacBook Air 2025、Apple M4、24 GB。兩平台正式執行改用 GNU GCC 16.2.0（WSL 本地建置／Mac Homebrew）；Mac 版本由本人提供，完整輸出待核對。原有 GCC 15.2.0 與 Apple Clang 21.0.0 保留。詳見 [Q0 歷史紀錄](docs/q0_environment.md) 與 [工具鏈說明](docs/gcc16_toolchain.md)。Q5 仍需核對來源、版本、flags 與實際輸出。

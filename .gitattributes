@@ -1,0 +1,5 @@
+# Bash scripts must remain executable by WSL after a Windows Git checkout.
+*.sh text eol=lf
+# Keep cross-platform source hashes stable for Q5.
+*.cpp text eol=lf
+*.hpp text eol=lf
