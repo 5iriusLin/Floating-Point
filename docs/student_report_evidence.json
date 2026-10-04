@@ -152,7 +152,7 @@
       "sha256": "e9536b6070b22f3bb778e27958fedcc7f0c8d457387b1fea6c2db89f4cf86ebb",
       "included_in_condensed_report": true,
       "condensed_figure_label": "圖 5-1",
-      "condensed_caption": "圖 5-1 WSL 四模式輸出，ABI 案例皆先設定 nearest。"
+      "condensed_caption": "圖 5-1 WSL 在 FE_TONEAREST 下的型態參數與結果 1。"
     },
     {
       "file": "Screenshot 2026-10-04 203307.png",
@@ -193,7 +193,7 @@
       "sha256": "9dc88f6badc1854d6234521a9e64d49211252d5edd50ee408bd14413cc88be06",
       "included_in_condensed_report": true,
       "condensed_figure_label": "圖 5-3",
-      "condensed_caption": "圖 5-3 Mac long double 在 nearest 下得到 0。"
+      "condensed_caption": "圖 5-3 Mac 在 FE_TONEAREST 下的型態參數與結果 0。"
     },
     {
       "file": "mac截圖/截圖 2026-10-04 晚上9.17.09.png",
@@ -206,8 +206,8 @@
   ],
   "mac_q5_status": "completed_student_run_four_pair_checks_match",
   "embedded_screenshots": 14,
-  "report_focus": "direct factual statements supported by machine outputs and generated instructions; first person removed outside unchanged Q6; AI disclosure in Q7 only",
-  "report_pages": 12,
-  "visual_qa": "Microsoft Word PDF export; all 12 pages visually checked; 14 screenshots with native scaling/crop; Q6 XML unchanged",
-  "q6_preserved_sha256": "b8790d8021c78a5de961ae01abdd79183d07f271f188bcfc1d20a3d605da7859"
+  "report_focus": "Original assignment title and Q0--Q7 headings; required comparisons, implementations, counterexamples and machine evidence; Q5 same-nearest ABI comparison",
+  "report_pages": 11,
+  "visual_qa": "Microsoft Word PDF export; all 11 pages visually checked; original screenshot media hashes verified; Q6 body unchanged, heading restored",
+  "q6_body_preserved_sha256": "8987632ae4ac9ddefaa1bd6c6ecb4862fc970fa6e063d86e070767a2101b961c"
 }
