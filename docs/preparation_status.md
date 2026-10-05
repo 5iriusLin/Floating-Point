@@ -16,7 +16,7 @@
 | Q2～Q6 入口檢查 | --help／--check 通過；沒有執行數值案例 |
 | 防止最佳化／Q3 flag 差異 | 本人正式產生碼與 strict／fast 輸出已保存並整理入 Word |
 | Bash scripts／Python CLI | 語法／入口檢查通過 |
-| 根目錄 Word 報告 | Windows／Mac 實測整理為 9 頁、7 張關鍵截圖；保留全部 18 組計時中位數，以觀察／證據／原因為主，AI 使用集中於 Q7；逐頁排版已檢查 |
+| 根目錄 Word 報告 | Windows／Mac 實測整理為 9 頁、7 張關鍵截圖；保留全部 18 組計時中位數，以白話測試方法、實測結果與簡短原因為主，Q5 明列 WSL 1／Mac 0，AI 使用集中於 Q7；逐頁排版已檢查 |
 | 助手 benchmark／精度／Q2～Q6 驗證 | 完整批次成功，assistant 目錄保存實際原始資料與摘要 |
 | 本人正式 benchmark／精度／截圖 | 已完成；student 批次 failed_experiments=0，資料驗證通過，18 組中位數由原始樣本獨立核對一致 |
 | 截圖／最後 PDF | Windows 21 張及 Mac 4 張原圖全部保存，7 張關鍵圖嵌入 Word；提交 PDF 待本人確認後輸出 |

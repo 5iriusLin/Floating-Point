@@ -4,7 +4,7 @@ Advanced C++ Homework 2。截止：2026/10/07 23:59（Asia/Taipei），於 eecla
 
 ## 目前狀態
 
-**Windows／WSL 與 Mac Q5 實驗已完成，結果已整理入原 Word。** 報告精簡為 9 頁、7 張關鍵截圖，各題著重本機的觀察、執行證據與原因；AI 使用說明集中於 Q7。完整 126 筆計時樣本及 Windows 21 張、Mac 4 張原始截圖仍保留於專案。[結果與重現紀錄](docs/student_windows_results.md)。
+**Windows／WSL 與 Mac Q5 實驗已完成，結果已整理入原 Word。** 報告精簡為 9 頁、7 張關鍵截圖，Q1～Q5 改用白話說明測試方法、實測結果與原因；Q5 開頭直接列出 WSL 得到 1、Mac 得到 0；Q6 保留；AI 使用說明集中於 Q7。完整 126 筆計時樣本及 Windows 21 張、Mac 4 張原始截圖仍保留於專案。[結果與重現紀錄](docs/student_windows_results.md)。
 
 主要平台：Windows 11 + WSL2 Ubuntu、Intel Core i7-14650HX；比較平台：MacBook Air 2025、Apple M4、24 GB。兩平台正式執行改用 GNU GCC 16.2.0（WSL 本地建置／Mac Homebrew）；Mac 完整版本、硬體與 runtime 已由本人採集。原有 GCC 15.2.0 與 Apple Clang 21.0.0 保留。詳見 [Q0 歷史紀錄](docs/q0_environment.md) 與 [工具鏈說明](docs/gcc16_toolchain.md)。Q5 已核對本人兩端來源、版本、flags 與實際輸出，WSL／Mac long double 增量分別為 1／0。
 

@@ -88,7 +88,7 @@
       "sha256": "c4a8fcdb29e52683097788462f090b9dbea055dc59203bcdd052ae1cb709af09",
       "included_in_condensed_report": true,
       "condensed_figure_label": "圖 2-1",
-      "condensed_caption": "圖 2-1 default 的 sqrt 指令與負值 fallback；forced-libm 載入函式符號。"
+      "condensed_caption": "圖 2-1 編譯後仍可看到平方根指令；另一版本呼叫函式庫。"
     },
     {
       "file": "Screenshot 2026-10-04 202517.png",
@@ -136,7 +136,7 @@
       "sha256": "6c8e4d6f18dbafc2b9cbe4d34dd9c4759ac7a6a1eda74209b58fdda2266b545c",
       "included_in_condensed_report": true,
       "condensed_figure_label": "圖 4-1",
-      "condensed_caption": "圖 4-1 精確中點、鄰近值與四模式的關鍵輸出。"
+      "condensed_caption": "圖 4-1 中點、鄰近值與不同捨入方式的輸出。"
     },
     {
       "file": "Screenshot 2026-10-04 203143.png",
@@ -152,7 +152,7 @@
       "sha256": "e9536b6070b22f3bb778e27958fedcc7f0c8d457387b1fea6c2db89f4cf86ebb",
       "included_in_condensed_report": true,
       "condensed_figure_label": "圖 5-1",
-      "condensed_caption": "圖 5-1 WSL 在 FE_TONEAREST 下的型態參數與結果 1。"
+      "condensed_caption": "圖 5-1 Windows／WSL：long_double_increment=1。"
     },
     {
       "file": "Screenshot 2026-10-04 203307.png",
@@ -193,7 +193,7 @@
       "sha256": "9dc88f6badc1854d6234521a9e64d49211252d5edd50ee408bd14413cc88be06",
       "included_in_condensed_report": true,
       "condensed_figure_label": "圖 5-2",
-      "condensed_caption": "圖 5-2 Mac 在 FE_TONEAREST 下的型態參數與結果 0。"
+      "condensed_caption": "圖 5-2 Mac：long_double_increment=0。"
     },
     {
       "file": "mac截圖/截圖 2026-10-04 晚上9.17.09.png",
@@ -206,8 +206,8 @@
   ],
   "mac_q5_status": "completed_student_run_four_pair_checks_match",
   "embedded_screenshots": 7,
-  "report_focus": "Experiment methods, controlled conditions, actual observations and explanations; seven critical screenshots; original assignment headings; Q6 unchanged",
+  "report_focus": "Plain-language test methods, actual results and short explanations; Q5 leads with Windows 1 versus Mac 0; seven critical screenshots; Q6 unchanged",
   "report_pages": 9,
-  "visual_qa": "Microsoft Word PDF export; all 9 pages visually checked; table data unchanged; 7 displayed images match original screenshot hashes; Q6 exact XML unchanged",
+  "visual_qa": "Microsoft Word PDF export; all 9 pages visually checked; numeric result cells unchanged; all 7 referenced image hashes unchanged; Q6 exact XML preserved",
   "q6_body_preserved_sha256": "8987632ae4ac9ddefaa1bd6c6ecb4862fc970fa6e063d86e070767a2101b961c"
 }
