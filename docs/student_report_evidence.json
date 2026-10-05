@@ -208,7 +208,7 @@
   "embedded_screenshots": 3,
   "report_focus": "Final polishing of current report: technical narrative replaces standalone source/build/run instructions; compact Q0; all Q1-Q6 numeric tables preserved; Q3 and both Q5 screenshots retained; Q2 specification, implementation and reference algorithm retained; Q6 synthesis precedes gradual underflow",
   "report_pages": 7,
-  "visual_qa": "Microsoft Word PDF export; all seven pages visually inspected; body 12 pt, tables 11 pt, unchanged margins; Q0 fits first page; all result tables unchanged; 18 timing medians and 12 precision cases checked against raw logs; three retained images match prior media hashes",
+  "visual_qa": "Microsoft Word PDF export; all seven final pages visually inspected; all table XML, three image hashes, top-level headings, references, body style and margins exactly preserved from preceding version; Q5 code introduction moved immediately before code",
   "q6_revision": "Synthesis paragraph polished; command block removed; gradual-underflow explanation and numeric table preserved",
   "remaining_required_experiments": [],
   "qualification_notes": [
@@ -222,5 +222,11 @@
     "Q2 trivial std::sqrt wrapper source",
     "Q4 formatting source snippet",
     "Q0 hardware details not used in analysis"
+  ],
+  "final_local_polish": [
+    "Q5 memory-constraint explanation now introduces the code excerpt",
+    "Q4 ties-to-even explanation explicitly identifies the retained ninth digit",
+    "Q1 wording precisely distinguishes normal values",
+    "Q7 uses brief first-person disclosure of personal runs"
   ]
 }
