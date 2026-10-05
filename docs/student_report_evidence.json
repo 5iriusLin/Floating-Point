@@ -52,7 +52,7 @@
       "caption": "圖 1-1 本人產生的全部 Q1 中位數摘要與迭代設定。",
       "crop": null,
       "sha256": "a3f6872be0d3e11e5192cf95066c2822e895072acaf787fa23b4500917224dbf",
-      "included_in_condensed_report": true,
+      "included_in_condensed_report": false,
       "condensed_figure_label": "圖 1-1",
       "condensed_caption": "圖 1-1 實測中位數與迭代設定。"
     },
@@ -111,7 +111,7 @@
       "sha256": "204a0c8c0ec05399a19a75fdeba9a2ad0dd1471dd92c6db63b7d5d867ec77e27",
       "included_in_condensed_report": true,
       "condensed_figure_label": "圖 3-1",
-      "condensed_caption": "圖 3-1 strict／fast 在相同輸入下的輸出。"
+      "condensed_caption": "圖 3-1 相同輸入下，開啟 fast-math 後 left_grouped 由 1 變為 0，NaN 判斷由 true 變為 false。"
     },
     {
       "file": "Screenshot 2026-10-04 202736.png",
@@ -134,7 +134,7 @@
       "caption": "圖 4-1 精確中點、鄰近值與四模式的關鍵輸出。",
       "crop": null,
       "sha256": "6c8e4d6f18dbafc2b9cbe4d34dd9c4759ac7a6a1eda74209b58fdda2266b545c",
-      "included_in_condensed_report": true,
+      "included_in_condensed_report": false,
       "condensed_figure_label": "圖 4-1",
       "condensed_caption": "圖 4-1 中點、鄰近值與不同捨入方式的輸出。"
     },
@@ -152,7 +152,7 @@
       "sha256": "e9536b6070b22f3bb778e27958fedcc7f0c8d457387b1fea6c2db89f4cf86ebb",
       "included_in_condensed_report": true,
       "condensed_figure_label": "圖 5-1",
-      "condensed_caption": "圖 5-1 Windows／WSL：long_double_increment=1。"
+      "condensed_caption": "圖 5-1 WSL：long double 有 64 個有效位，增量計算得到 1。"
     },
     {
       "file": "Screenshot 2026-10-04 203307.png",
@@ -193,7 +193,7 @@
       "sha256": "9dc88f6badc1854d6234521a9e64d49211252d5edd50ee408bd14413cc88be06",
       "included_in_condensed_report": true,
       "condensed_figure_label": "圖 5-2",
-      "condensed_caption": "圖 5-2 Mac：long_double_increment=0。"
+      "condensed_caption": "圖 5-2 Apple M4 Mac：long double 有 53 個有效位，相同增量計算得到 0。"
     },
     {
       "file": "mac截圖/截圖 2026-10-04 晚上9.17.09.png",
@@ -205,20 +205,22 @@
     }
   ],
   "mac_q5_status": "completed_student_run_four_pair_checks_match",
-  "embedded_screenshots": 5,
-  "report_focus": "Reorganized existing Q0-Q7 report, avoiding repeated subsection templates; Q2 specification, real assembly and reference algorithm retained; Q5 WSL/Mac evidence retained; Q6 summary precedes extra subnormal detail",
+  "embedded_screenshots": 3,
+  "report_focus": "Final polishing of current report: technical narrative replaces standalone source/build/run instructions; compact Q0; all Q1-Q6 numeric tables preserved; Q3 and both Q5 screenshots retained; Q2 specification, implementation and reference algorithm retained; Q6 synthesis precedes gradual underflow",
   "report_pages": 7,
-  "visual_qa": "Microsoft Word PDF export; all 7 final pages visually inspected; all Q1-Q6 result table text unchanged; 18 medians verified against raw CSV; five displayed images retain original hashes",
-  "q6_revision": "Rephrased summary and extra subnormal discussion under latest user instruction; numerical table unchanged; redundant screenshot removed from display",
+  "visual_qa": "Microsoft Word PDF export; all seven pages visually inspected; body 12 pt, tables 11 pt, unchanged margins; Q0 fits first page; all result tables unchanged; 18 timing medians and 12 precision cases checked against raw logs; three retained images match prior media hashes",
+  "q6_revision": "Synthesis paragraph polished; command block removed; gradual-underflow explanation and numeric table preserved",
   "remaining_required_experiments": [],
   "qualification_notes": [
     "Q5 matches GCC release 16.2.0, source and flags; platform compiler builds and targets differ.",
     "Q2 generic glibc source is algorithm reference, not an exact source-version match to local libm; actual local hardware path is verified from saved disassembly."
   ],
   "removed_from_display": [
-    "Q2 full assembly screenshot replaced with source-linked assembly excerpt",
-    "Q6 terminal screenshot replaced with unchanged three-case results table",
-    "Repeated subsection headings",
-    "Unused type metadata columns and repeated Q0 flags"
+    "Standalone build/run/source blocks and result-directory names",
+    "Q1 screenshot duplicating benchmark table",
+    "Q4 screenshot duplicating rounding table",
+    "Q2 trivial std::sqrt wrapper source",
+    "Q4 formatting source snippet",
+    "Q0 hardware details not used in analysis"
   ]
 }

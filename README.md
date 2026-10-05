@@ -4,7 +4,7 @@ Advanced C++ Homework 2。截止：2026/10/07 23:59（Asia/Taipei），於 eecla
 
 ## 目前狀態
 
-**Windows／WSL 與 Mac Q5 實驗已完成，結果已整理入原 Word。** 報告為 7 頁、5 張關鍵截圖，保留 Q0～Q7 原題標題、全部 Q1 速度與精度結果、Q2 規格／硬體路徑／參考算法、Q5 WSL 與 Mac 的對照。Q6 先總結再補充 subnormal，AI 說明集中於 Q7。完整 126 筆計時樣本及 Windows 21 張、Mac 4 張原始截圖仍保留於專案。[結果與重現紀錄](docs/student_windows_results.md)。
+**Windows／WSL 與 Mac Q5 實驗已完成，結果已整理入原 Word。** 最終潤飾版為 7 頁、3 張關鍵截圖，正文著重浮點數行為、原因及實測證據，移除操作指令和路徑。Q1 全部速度／精度表、Q2 規格與實作、Q3 對照、Q4 中點反例、Q5 WSL／Mac 資料、Q6 總結及額外 underflow 議題均保留。完整 126 筆計時樣本與 Windows 21 張、Mac 4 張原始截圖仍保存在專案。[結果與重現紀錄](docs/student_windows_results.md)。
 
 主要平台：Windows 11 + WSL2 Ubuntu、Intel Core i7-14650HX；比較平台：MacBook Air 2025、Apple M4、24 GB。兩平台正式執行改用 GNU GCC 16.2.0（WSL 本地建置／Mac Homebrew）；Mac 完整版本、硬體與 runtime 已由本人採集。原有 GCC 15.2.0 與 Apple Clang 21.0.0 保留。詳見 [Q0 歷史紀錄](docs/q0_environment.md) 與 [工具鏈說明](docs/gcc16_toolchain.md)。Q5 已核對本人兩端來源、版本、flags 與實際輸出，WSL／Mac long double 增量分別為 1／0。
 

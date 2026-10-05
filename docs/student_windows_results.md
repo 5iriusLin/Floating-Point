@@ -8,11 +8,11 @@
 
 ## 目前 Word 版本
 
-根目錄 `Floating_Point_Report_Q0.docx` 為 7 頁、5 張關鍵截圖，依現有報告整理，保留 Q0～Q7 原題標題。移除重複式實驗方法／結果小標題；Q1 保留全部 18 組時間與 12 個精度結果。Q2 保留 C++ 規格、實際硬體與 libm 路徑，將整張 assembly 截圖改為保存檔案的關鍵指令摘錄；通用 glibc 軟體算法另註明為參考。Q3 保留只切換 fast-math 的例子，Q4 直接回答中點不一定進位。Q5 保留 WSL／Mac 原始結果與兩張截圖，以及同 release、不同平台建置的限制。Q6 按最新要求先總結全份報告，再討論 subnormal；三組數值表保留，重複 terminal 圖移出正文。Q7 簡短揭露學生與 AI 分工。原圖與 results 均未刪除或改寫。
+根目錄 `Floating_Point_Report_Q0.docx` 最終潤飾版為 7 頁、3 張關鍵截圖，保留原題標題並以連續技術敘述呈現。正文移除來源／編譯／執行指令、結果目錄、核對腳本及不必要的程式片段；精確重現資訊仍在專案。Q0 縮成第一頁內的必要平台與型態資料。Q1 的 18 組速度及 12 個精度結果完整保留，重複 benchmark 圖移出；Q2 保留規格、硬體／libm 路徑、短指令摘錄與通用軟體算法參考。Q3 保留差異輸出圖；Q4 保留中點反例與模式表，重複截圖移出。Q5 保留兩平台完整比較及兩張原圖；Q6 結論串連全份報告，再補充 gradual underflow 與原數值表。Q7 簡短揭露分工。正文 12 pt、表格 11 pt，頁邊界不變。
 
 完整計時樣本、全部案例與原始截圖仍保留於 results、screenshot、mac截圖，並未因報告精簡而刪除。圖與原始檔的 SHA-256／對照索引見 `docs/student_report_evidence.json`；included_in_condensed_report 與 condensed_figure_label 標示目前正文使用的圖片。
 
-Word 已透過 Microsoft Word 匯出供內部檢查的 7 頁預覽，逐頁檢查表格、截圖、圖說及頁尾。5 張嵌入圖片的原始媒體雜湊均與截圖一致；裁切與縮放使用 Word 原生設定。內部預覽不作為提交 PDF，也不放入 Git。
+Word 已透過 Microsoft Word 匯出供內部檢查的 7 頁預覽，逐頁檢查表格、截圖、圖說及頁尾。3 張嵌入圖片的原始媒體雜湊均與截圖一致；裁切與縮放使用 Word 原生設定。內部預覽不作為提交 PDF，也不放入 Git。
 
 ## Mac Q5 已完成
 
