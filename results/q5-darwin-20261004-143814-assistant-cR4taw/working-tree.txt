@@ -1,2 +1,0 @@
-?? results/q5-darwin-20261004-143814-assistant-cR4taw/
-?? scripts/run_q5.sh

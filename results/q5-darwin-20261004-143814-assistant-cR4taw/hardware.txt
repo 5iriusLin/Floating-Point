@@ -1,4 +1,0 @@
-$ sysctl hw.model hw.memsize hw.physicalcpu hw.logicalcpu machdep.cpu.brand_string 
-sysctl: sysctl fmt -1 1024 1: Operation not permitted
-
-[exit=1]

@@ -1,4 +1,0 @@
-$ results/q5-darwin-20261004-210835-assistant-z5BqYO/q5_portability --check 
-CHECK PASSED: binary floating-point support; experiment not run.
-
-[exit=0]

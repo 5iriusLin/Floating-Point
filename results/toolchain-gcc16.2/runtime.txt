@@ -1,6 +1,0 @@
-	linux-vdso.so.1 (0x00007ffe1d7cb000)
-	libstdc++.so.6 => /home/alan/.local/toolchains/gcc-16.2.0/lib64/libstdc++.so.6 (0x000079f283400000)
-	libm.so.6 => /usr/lib/x86_64-linux-gnu/libm.so.6 (0x000079f2832da000)
-	libgcc_s.so.1 => /home/alan/.local/toolchains/gcc-16.2.0/lib64/libgcc_s.so.1 (0x000079f283795000)
-	libc.so.6 => /usr/lib/x86_64-linux-gnu/libc.so.6 (0x000079f283000000)
-	/lib64/ld-linux-x86-64.so.2 (0x000079f2837cd000)

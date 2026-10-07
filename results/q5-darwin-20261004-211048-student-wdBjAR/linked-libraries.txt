@@ -1,6 +1,0 @@
-$ otool -L results/q5-darwin-20261004-211048-student-wdBjAR/q5_portability 
-results/q5-darwin-20261004-211048-student-wdBjAR/q5_portability:
-	/opt/homebrew/opt/gcc/lib/gcc/current/libstdc++.6.dylib (compatibility version 7.0.0, current version 7.36.0)
-	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)
-
-[exit=0]

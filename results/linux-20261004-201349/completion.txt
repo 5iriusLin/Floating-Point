@@ -1,2 +1,0 @@
-run_dir=results/linux-20261004-201349
-failed_experiments=0

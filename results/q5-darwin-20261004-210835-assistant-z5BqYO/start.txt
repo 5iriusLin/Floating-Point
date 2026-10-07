@@ -1,4 +1,0 @@
-executed_by=assistant
-action=build
-CXX=g++-16
-2026-10-04T21:08:35+0800

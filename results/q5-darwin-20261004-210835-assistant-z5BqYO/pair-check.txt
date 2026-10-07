@@ -1,6 +1,0 @@
-compiler_family: MATCH
-compiler_version: MATCH
-flags: MATCH
-q5_and_common_source: MATCH
-Targets: x86_64-pc-linux-gnu / aarch64-apple-darwin27
-Necessary checks only. Inspect vendor patches, ABI, outputs, and validity before claiming Q5 completion.

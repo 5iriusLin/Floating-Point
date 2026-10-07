@@ -1,3 +1,0 @@
-$ g++-16 -std=c++20 -Wall -Wextra -fno-lto -ffp-contract=off -O2 -fno-fast-math -frounding-math -S experiments/q5_portability/operations.cpp -o results/q5-darwin-20261004-210835-assistant-z5BqYO/q5_portability.s 
-
-[exit=0]
